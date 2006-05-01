@@ -1,0 +1,6 @@
+name="cfg"
+version="1.6.1"
+description="CFG - library for handling context-free grammars"
+requires=""
+archive(byte)="cfg.cma"
+archive(native)="cfg.cmxa"
