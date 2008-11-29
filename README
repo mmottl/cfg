@@ -26,9 +26,7 @@ OcamlMakefile       - Makefile for easy handling of compilation of not
                       generates native- or byte-code, as executable or
                       as library - with thread-support if you want!
 
-README              - this file
-
-VERSION             - Current version number of release
+README.txt          - this file
 
 lib/                - Implementation of the CFG-library
 
