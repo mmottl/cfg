@@ -1,5 +1,5 @@
 name="cfg"
-version="1.7.3"
+version="1.7.6"
 description="CFG - library for handling context-free grammars"
 requires=""
 archive(byte)="cfg.cma"
