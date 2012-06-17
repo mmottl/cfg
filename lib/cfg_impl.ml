@@ -120,7 +120,7 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
 
   let rec prune_unproductive gr =
     let remaining_nts = NTMap.fold remove_unproductive gr gr in
-    if remaining_nts = gr then gr
+    if NTMap.equal ProdSet.equal remaining_nts gr then gr
     else prune_unproductive remaining_nts
 
 
@@ -250,9 +250,9 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
   let rec bnd_descend levels gr reached_nts n =
     if n <= 0 || reached_nts = NTSet.empty then levels
     else
-      let ts, new_reached_nts =
+      let _, new_reached_nts as this_level =
         NTSet.fold (bnd_descend_nt gr) reached_nts (TSet.empty, NTSet.empty) in
-      bnd_descend ((ts, new_reached_nts) :: levels) gr new_reached_nts (n-1)
+      bnd_descend (this_level :: levels) gr new_reached_nts (n - 1)
 
   let bnd_ascend_prod kept_nts (_, syms as prod) prods =
     if List.for_all (sym_derivable kept_nts) syms then prods
@@ -293,7 +293,7 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
   let bounded_grammar gr start n =
     match bnd_descend [] gr (NTSet.singleton start) n with
     | [] -> []
-    | (ts, nts) :: levels ->
+    | (ts, _last_nts) :: levels ->
         let init = [(ts, NTMap.empty)], NTMap.empty in
         fst (List.fold_left (bnd_ascend gr) init levels)
 end

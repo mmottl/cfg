@@ -1,5 +1,4 @@
 {
-open Lexing
 open Bnf_parser
 
 let id x = x

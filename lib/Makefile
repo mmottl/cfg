@@ -4,6 +4,8 @@ SOURCES = \
   cfg_intf.mli cfg_impl.mli cfg_impl.ml \
   bnf_spec.mli bnf_spec.ml bnf_parser.mly bnf_lexer.mll bnf_pp.mli bnf_pp.ml
 
+OCAMLFLAGS += -w Aer -strict-sequence
+
 RESULT  = cfg
 
 LIBINSTALL_FILES = \
