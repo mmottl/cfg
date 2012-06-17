@@ -147,9 +147,12 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
     with Found n -> NTMap.add nt n live_nts, NTMap.remove nt nonlive_nts
 
   let rec split_live_info (live_nts, nonlive_nts as live_info) =
-    let new_live_info =
+    let new_live_nts, new_nonlive_nts as new_live_info =
       NTMap.fold (coll_live_info live_nts) nonlive_nts live_info in
-    if live_info = new_live_info then live_info
+    if
+      NTMap.equal (=) live_nts new_live_nts &&
+      NTMap.equal ProdSet.equal nonlive_nts new_nonlive_nts
+    then live_info
     else split_live_info new_live_info
 
   let deriv_prods live_nts (_, syms as prod) prods =
@@ -184,7 +187,7 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
     NTMap.fold NTMap.add (coll_reachable_prods gr prods)
 
   let rec get_unreachable gr root_nts =
-    if root_nts = NTMap.empty then gr
+    if NTMap.is_empty root_nts then gr
     else
       let new_gr = NTMap.fold (fun k _ -> NTMap.remove k) root_nts gr in
       let reachable_nts =
@@ -248,7 +251,7 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
   let bnd_descend_nt gr nt = ProdSet.fold collect_syms (NTMap.find nt gr)
 
   let rec bnd_descend levels gr reached_nts n =
-    if n <= 0 || reached_nts = NTSet.empty then levels
+    if n <= 0 || NTSet.is_empty reached_nts then levels
     else
       let _, new_reached_nts as this_level =
         NTSet.fold (bnd_descend_nt gr) reached_nts (TSet.empty, NTSet.empty) in
@@ -265,7 +268,7 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
     else NTMap.add nt kept_prods nts
 
   let cleanup_sym (ts, nts) =
-    if ts = TSet.empty && nts = NTMap.empty then raise Exit
+    if TSet.is_empty ts && NTMap.is_empty nts then raise Exit
     else function
       | T t -> TSet.remove t ts, nts
       | NT nt -> ts, NTMap.remove nt nts
