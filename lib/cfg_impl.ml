@@ -283,8 +283,8 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
             NTMap.fold (fun _ -> ProdSet.fold cleanup_prod) kept_nts level in
           let good_ts = TSet.diff ts bad_ts in
           let good_nts = NTMap.fold (fun nt _ -> NTMap.remove nt) bad_nts nts in
-          if nts == good_nts then
-            if ts == good_ts then levels
+          if NTMap.is_empty bad_nts then
+            if TSet.is_empty bad_ts then levels
             else (good_ts, nts) :: rest
           else (good_ts, good_nts) :: cleanup_levels good_nts rest
         with Exit -> levels
