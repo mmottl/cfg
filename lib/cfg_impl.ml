@@ -94,8 +94,8 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
 
   let inter_aux k v (res, gr as acc) =
     try
-      let new_gr = NTMap.remove k gr
-      and k_prods = NTMap.find k gr in
+      let new_gr = NTMap.remove k gr in
+      let k_prods = NTMap.find k gr in
       let prods_inter = ProdSet.inter k_prods v in
       if ProdSet.is_empty prods_inter then res, new_gr
       else NTMap.add k prods_inter res, new_gr
@@ -195,8 +195,8 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
       get_unreachable new_gr reachable_nts
 
   let prune_unreachable gr start_sym =
-    let s_prods = NTMap.find start_sym gr
-    and no_s_gr = NTMap.remove start_sym gr in
+    let s_prods = NTMap.find start_sym gr in
+    let no_s_gr = NTMap.remove start_sym gr in
     diff gr (get_unreachable no_s_gr (coll_reachable_prods no_s_gr s_prods))
 
 
@@ -281,8 +281,8 @@ module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
         try
           let (bad_ts, bad_nts) =
             NTMap.fold (fun _ -> ProdSet.fold cleanup_prod) kept_nts level in
-          let good_ts = TSet.diff ts bad_ts
-          and good_nts = NTMap.fold (fun nt _ -> NTMap.remove nt) bad_nts nts in
+          let good_ts = TSet.diff ts bad_ts in
+          let good_nts = NTMap.fold (fun nt _ -> NTMap.remove nt) bad_nts nts in
           if nts == good_nts then
             if ts == good_ts then levels
             else (good_ts, nts) :: rest
