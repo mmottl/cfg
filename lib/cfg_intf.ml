@@ -20,7 +20,7 @@
    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 *)
 
-(* $Id: cfg_intf.mli,v 1.6 2006/01/16 23:57:58 mottl Exp $ *)
+(* $Id: cfg_intf.ml,v 1.6 2006/01/16 23:57:58 mottl Exp $ *)
 
 
 (** CFG - Library for the Manipulation of Context-Free Grammars *)
