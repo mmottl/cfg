@@ -1,0 +1,18 @@
+OASISFormat:      0.3
+OCamlVersion:     >= 4.00
+Name:             cfg
+Version:          1.7.7
+Synopsis:         CFG - Library for Manipulating Context-Free Grammars
+Description:      CFG is a library for verifying and manipulating context-free grammars.
+Authors:          Markus Mottl <markus.mottl@gmail.com>
+License:          LGPL-3+ with OCaml linking exception
+Plugins:          META (0.3), StdFiles (0.3), DevFiles (0.3)
+Homepage:         http://www.bitbucket.org/mmottl/cfg
+XStdFilesREADME:  false
+XStdFilesAUTHORS: false
+
+Library cfg
+  Path:           lib
+  FindlibName:    cfg
+  Modules:        Bnf_spec, Bnf_parser, Bnf_lexer, Bnf_pp, Cfg_intf, Cfg_impl
+  BuildTools:     ocamlbuild, menhir
