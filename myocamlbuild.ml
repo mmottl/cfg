@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 574a857e1454ac4c5bd0648ddaa6c9c3) *)
+(* DO NOT EDIT (digest: e4198721d1b56c3f8171936ed719254f) *)
 module OASISGettext = struct
 (* # 21 "/Users/mmottl/local/darwin11.3.0/src/oasis-0.3.0~rc6/src/oasis/OASISGettext.ml" *)
   
@@ -552,7 +552,7 @@ let package_default =
      MyOCamlbuildBase.lib_ocaml = [("cfg", ["lib"])];
      lib_c = [];
      flags = [];
-     includes = [];
+     includes = [("examples/bnf", ["lib"])];
      }
   ;;
 

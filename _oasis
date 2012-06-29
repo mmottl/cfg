@@ -16,3 +16,12 @@ Library cfg
   FindlibName:    cfg
   Modules:        Bnf_spec, Bnf_parser, Bnf_lexer, Bnf_pp, Cfg_intf, Cfg_impl
   BuildTools:     ocamlbuild, menhir
+
+# Examples
+Executable bnf
+  Path:           examples/bnf
+  MainIs:         bnf.ml
+  BuildDepends:   cfg
+  Install:        false
+  CompiledObject: best
+  BuildTools:     ocamlbuild
