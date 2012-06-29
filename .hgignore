@@ -1,3 +1,4 @@
 ^.*\.swp$
 ^setup\.(log|data)$
 ^_build/.*$
+^bnf\.native$
