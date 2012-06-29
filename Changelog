@@ -1,3 +1,6 @@
+2012-06-29: Switched to Oasis / ocamlbuild, updated to OCaml 4.00, and fixed
+            a few bugs.
+
 2006-11-22: Updated OCamlMakefile.
 
 2003-04-08: Updated OCamlMakefile.
