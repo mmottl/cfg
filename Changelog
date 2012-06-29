@@ -27,7 +27,7 @@
 2001-06-30: Removed "Printexc.catch" from BNF-example: is going to be
             deprecated in upcoming OCaml-release.
 
-2001-02-23: Changed interface in "cfg_intf.mli" slightly:
+2001-02-23: Changed interface in "cfg_intf.ml" slightly:
 
             Renamed function "live_grammar" to "deriv_depth_info" and
             also changed some comments.
