@@ -67,8 +67,13 @@ For details see the API documentation in `cfg_intf.ml`.
 BNF-Example
 -----------
 
-The example uses CFGs in traditional BNF-notation, which represents terminals
-and nonterminals as plain strings.
+The example in `examples/bnf` uses CFGs in traditional BNF-notation, which
+represents terminals and nonterminals as plain strings.  It reads in a grammar
+specification from `stdin` and prints information about the grammar.  Here is
+an example invocation (from top directory in the distribution after building):
+
+  :::sh
+  bnf.native < examples/bnf/test.bnf
 
 You cannot have several productions that contain the same terminals and
 nonterminals in the same order, because this BNF-example uses the unit-type
