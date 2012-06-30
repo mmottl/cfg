@@ -5,7 +5,7 @@ Version:          1.7.7
 Synopsis:         CFG - Library for Manipulating Context-Free Grammars
 Description:      CFG is a library for verifying and manipulating context-free grammars.
 Authors:          Markus Mottl <markus.mottl@gmail.com>
-License:          LGPL-3+ with OCaml linking exception
+License:          LGPL-2.1+ with OCaml linking exception
 Plugins:          META (0.3), StdFiles (0.3), DevFiles (0.3)
 Homepage:         http://www.bitbucket.org/mmottl/cfg
 XStdFilesREADME:  false
