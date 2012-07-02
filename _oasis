@@ -25,3 +25,11 @@ Executable bnf
   Install:        false
   CompiledObject: best
   BuildTools:     ocamlbuild
+
+Document API
+  Title:           API reference for CFG
+  Type:            OCamlbuild (0.3)
+  InstallDir:      $docdir/api
+  BuildTools:      ocamldoc, ocamlbuild
+  XOCamlbuildPath: .
+  XOCamlbuildLibraries: cfg
