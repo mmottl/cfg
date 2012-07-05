@@ -20,8 +20,6 @@
    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 *)
 
-(* $Id: cfg_impl.ml,v 1.8 2006/01/16 23:57:58 mottl Exp $ *)
-
 open Cfg_intf
 
 module Make (Spec_ : SPEC) : (CFG with module Spec = Spec_) = struct
