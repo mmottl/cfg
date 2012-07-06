@@ -20,7 +20,13 @@ XStdFilesREADME:  false
 Library cfg
   Path:           lib
   FindlibName:    cfg
-  Modules:        Bnf_spec, Bnf_parser, Bnf_lexer, Bnf_pp, Cfg_intf, Cfg_impl, Version
+  Modules:        Bnf_spec,
+                  Bnf_parser,
+                  Bnf_lexer,
+                  Bnf_pp,
+                  Cfg_intf,
+                  Cfg_impl,
+                  Version
   BuildTools:     ocamlbuild, menhir
 
 
