@@ -37,11 +37,11 @@ Executable bnf
 #
 
 Document API
-  Title:           API reference for CFG
-  Type:            OCamlbuild (0.3)
-  InstallDir:      $docdir/api
-  BuildTools:      ocamldoc, ocamlbuild
-  XOCamlbuildPath: .
+  Title:                API reference for CFG
+  Type:                 OCamlbuild (0.3)
+  InstallDir:           $docdir/api
+  BuildTools:           ocamldoc, ocamlbuild
+  XOCamlbuildPath:      .
   XOCamlbuildLibraries: cfg
 
 SourceRepository trunk
