@@ -1,9 +1,10 @@
 # OASIS_START
-# DO NOT EDIT (digest: c0d74fa1f71102aebfe0edccddac178a)
+# DO NOT EDIT (digest: 252a831999b8ede345d8e84cd52b22ee)
 Bnf_spec
 Bnf_parser
 Bnf_lexer
 Bnf_pp
 Cfg_intf
 Cfg_impl
+Version
 # OASIS_STOP
