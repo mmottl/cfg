@@ -20,4 +20,4 @@
 <examples/bnf/*.ml{,i}>: use_cfg
 # OASIS_STOP
 true: use_menhir
-<**/*.ml{,i}>: warn_A, warn_e, warn_r
+<**/*.ml{,i}>: warn_A, warn_e, warn_r, annot
