@@ -95,7 +95,7 @@ Contact information and contributing
 ------------------------------------
 
 Up-to-date information should be available at:
-<http://www.bitbucket.org/mmottl/cfg>
+<https://bitbucket.org/mmottl/cfg>
 
 Enjoy!
 
