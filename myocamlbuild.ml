@@ -498,5 +498,4 @@ let () =
     MyOCamlbuildBase.dispatch_combine [
       MyOCamlbuildBase.dispatch_default package_default;
       additional_rules
-    ]
-  )
+    ])
