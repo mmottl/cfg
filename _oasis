@@ -17,6 +17,8 @@ Homepage:         https://bitbucket.org/mmottl/cfg
 Plugins:          META (0.3), StdFiles (0.3), DevFiles (0.3)
 XStdFilesREADME:  false
 
+BuildTools:       ocamlbuild, ocamldoc, menhir
+
 Library cfg
   Path:           lib
   FindlibName:    cfg
@@ -26,7 +28,6 @@ Library cfg
                   Bnf_pp,
                   Cfg_intf,
                   Cfg_impl
-  BuildTools:     ocamlbuild, menhir
 
 
 # Examples
@@ -37,7 +38,6 @@ Executable bnf
   BuildDepends:   cfg
   Install:        false
   CompiledObject: best
-  BuildTools:     ocamlbuild
 
 #
 
@@ -45,7 +45,6 @@ Document API
   Title:                API reference for CFG
   Type:                 OCamlbuild (0.3)
   InstallDir:           $docdir/api
-  BuildTools:           ocamldoc, ocamlbuild
   XOCamlbuildPath:      .
   XOCamlbuildLibraries: cfg
 
