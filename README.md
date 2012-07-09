@@ -6,9 +6,9 @@ CFG - Manipulation of Context-Free Grammars
 What is CFG?
 ------------
 
-This OCaml-library consists of a set of modules which implement functions
-for analyzing and manipulating context-free grammars (CFGs) in a purely
-functional way.
+This [OCaml](http://www.ocaml.org)-library consists of a set of modules which
+implement functions for analyzing and manipulating context-free grammars
+(CFGs) in a purely functional way.
 
 The core-module `cfg_impl.ml` contains a functor which allows the
 parameterization of the main transformation functions with arbitrary grammar
