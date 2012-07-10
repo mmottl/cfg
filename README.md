@@ -91,8 +91,11 @@ productions may have different semantics then and will not be treated the same.
 
 ---------------------------------------------------------------------------
 
-Contact information and contributing
+Contact Information and Contributing
 ------------------------------------
+
+In the case of bugs, feature requests, contributions and similar, you can
+contact me here: <markus.mottl@gmail.com>
 
 Up-to-date information should be available at:
 <https://bitbucket.org/mmottl/cfg>
