@@ -32,9 +32,14 @@ Library cfg
 
 # Examples
 
+Flag examples
+  Description:    Build examples
+  Default:        true
+
 Executable bnf
   Path:           examples/bnf
   MainIs:         bnf.ml
+  Build$:         flag(examples)
   BuildDepends:   cfg
   Install:        false
   CompiledObject: best
