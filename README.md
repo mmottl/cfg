@@ -60,7 +60,8 @@ efficiently.
 
 ### Documentation of Functions
 
-For details see the API documentation in `cfg_intf.ml`.
+For details see the API documentation in `cfg_intf.ml` or consult the latest
+[online API documentation](http://mmottl.bitbucket.org/projects/cfg/api/).
 
 ---------------------------------------------------------------------------
 
