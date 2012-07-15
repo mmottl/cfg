@@ -1,6 +1,6 @@
 OASISFormat:      0.3
 Name:             cfg
-Version:          1.7.7
+Version:          2.0.0
 Synopsis:         CFG - Library for Manipulating Context-Free Grammars
 Description:      CFG is a library for verifying and manipulating context-free grammars.
 Authors:          Markus Mottl <markus.mottl@gmail.com>

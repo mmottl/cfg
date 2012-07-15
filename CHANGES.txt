@@ -1,5 +1,13 @@
-2012-06-29: Switched to Oasis / ocamlbuild, updated to OCaml 4.00, and fixed
-            a few bugs.
+2012-07-15:  New major release version 2.0.0:
+
+               * Upgraded to OCaml 4.00
+               * Switched to Menhir for parser generation
+               * Switched to Oasis for packaging
+               * Switched to OCamlBuild for the build process
+               * Switched to LGPL-2.1 with linking exception
+               * Rewrote README in Markdown
+               * Added stricter compilation flags
+               * Fixed a few old bugs wrt. set/map comparisons in CFG
 
 2006-11-22: Updated OCamlMakefile.
 
