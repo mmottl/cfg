@@ -17,7 +17,7 @@ entities (terminals, nonterminals, productions).  See the interface in
 
 Thus, you may use this module for any kind of symbolic system that
 is equivalent to a context-free grammar.  This includes, for example,
-specifications of algebraic datatypes, which are isomorphic.
+specifications of algebraic data types, which are isomorphic.
 
 ---------------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ Functions for getting information on grammars:
     safely and efficiently export its internal representation without copying.
 
 Due to the applicative nature of the library, which allows a lot of sharing
-in memory (persistency), it should be useful for handling large grammars
+in memory (persistence), it should be useful for handling large grammars
 efficiently.
 
 ### Documentation of Functions
