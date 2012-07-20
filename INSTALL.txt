@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 761f4c0aa0bd8ffdf26c1aba9ca5f5a4) *)
+(* DO NOT EDIT (digest: c00b8731aec291eb8da9f3e9f41d1fcf) *)
 This is the INSTALL file for the cfg distribution.
 
 This package uses OASIS to generate its build system. See section OASIS for
@@ -10,7 +10,7 @@ Dependencies
 
 In order to compile this package, you will need:
 * ocaml (>= 3.12) for all, doc API
-* findlib (>= 1.3.2)
+* findlib (>= 1.3.1)
 * menhir for all, doc API
 
 Installing
