@@ -1,6 +1,6 @@
 # OASIS_START
-# DO NOT EDIT (digest: c4bb001edbed4f4bec741bc4199281bb)
-version = "2.0.1"
+# DO NOT EDIT (digest: 57317fa59744fdce04954f54c0254405)
+version = "2.0.2"
 description = "CFG - Library for Manipulating Context-Free Grammars"
 archive(byte) = "cfg.cma"
 archive(byte, plugin) = "cfg.cma"

@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: c00b8731aec291eb8da9f3e9f41d1fcf) *)
+(* DO NOT EDIT (digest: 4425dec4523531c1cd076f710d425c27) *)
 This is the INSTALL file for the cfg distribution.
 
 This package uses OASIS to generate its build system. See section OASIS for
@@ -24,7 +24,7 @@ Installing
 Uninstalling
 ============
 
-1. Go to the root of the package 
+1. Go to the root of the package
 2. Run 'ocaml setup.ml -uninstall'
 
 OASIS

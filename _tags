@@ -1,7 +1,7 @@
 # OASIS_START
-# DO NOT EDIT (digest: 0e9ea87788c161fe91eb239c282ab181)
-# Ignore VCS directories, you can use the same kind of rule outside 
-# OASIS_START/STOP if you want to exclude directories that contains 
+# DO NOT EDIT (digest: ae4fabcbc002bd1d05c08e3b853b39e1)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
 <**/.svn>: -traverse
 <**/.svn>: not_hygienic
@@ -19,5 +19,10 @@
 <examples/bnf/bnf.{native,byte}>: use_cfg
 <examples/bnf/*.ml{,i}>: use_cfg
 # OASIS_STOP
+
+true: -traverse
+<{lib,examples}/**>: traverse
+
+<**/*.ml{,i}>: warn(Aer-44), annot
+
 true: use_menhir
-<**/*.ml{,i}>: warn_A, warn_e, warn_r, annot
