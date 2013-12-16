@@ -23,6 +23,6 @@
 true: -traverse
 <{lib,examples}/**>: traverse
 
-<**/*.ml{,i}>: warn(Aer-44), annot
+<**/*.ml{,i}>: warn(Aer-44), strict_sequence, annot
 
 true: use_menhir
