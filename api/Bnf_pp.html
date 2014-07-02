@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Bnf_lexer.html">
+<link rel="next" href="Cfg_intf.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Bnf_spec" rel="Chapter" href="Bnf_spec.html">
+<link title="Bnf_parser" rel="Chapter" href="Bnf_parser.html">
+<link title="Bnf_lexer" rel="Chapter" href="Bnf_lexer.html">
+<link title="Bnf_pp" rel="Chapter" href="Bnf_pp.html">
+<link title="Cfg_intf" rel="Chapter" href="Cfg_intf.html">
+<link title="Cfg_impl" rel="Chapter" href="Cfg_impl.html"><title>Bnf_pp</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Bnf_lexer.html" title="Bnf_lexer">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Cfg_intf.html" title="Cfg_intf">Next</a>
+</div>
+<h1>Module <a href="type_Bnf_pp.html">Bnf_pp</a></h1>
+
+<pre><span class="keyword">module</span> Bnf_pp: <code class="code">sig</code> <a href="Bnf_pp.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Pretty-printing functions for BNF-grammars<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALpp_prod"><span class="keyword">val</span> pp_prod</span> : <code class="type">Format.formatter -> Bnf_spec.Bnf.Spec.symbol list -> unit</code></pre><div class="info ">
+<code class="code">pp_prod ppf syms</code> prettyprint symbols list <code class="code">syms</code> using prettyprinter
+    <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_live_prods"><span class="keyword">val</span> pp_live_prods</span> : <code class="type">Format.formatter -> int Bnf_spec.Bnf.ProdMap.t -> unit</code></pre><div class="info ">
+<code class="code">pp_live_prods ppf syms</code> prettyprint live production map <code class="code">pm</code> using
+    prettyprinter <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_nt"><span class="keyword">val</span> pp_nt</span> : <code class="type">Format.formatter -> string -> Bnf_spec.Bnf.ProdSet.t -> unit</code></pre><div class="info ">
+<code class="code">pp_nt ppf nt ps</code> prettyprint nonterminal <code class="code">nt</code> and its production set
+    <code class="code">ps</code> using prettyprinter <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_live_nt"><span class="keyword">val</span> pp_live_nt</span> : <code class="type">Format.formatter -> string -> int * int Bnf_spec.Bnf.ProdMap.t -> unit</code></pre><div class="info ">
+<code class="code">pp_nt ppf nt di</code> prettyprint live nonterminal <code class="code">nt</code> and its derivation
+    information <code class="code">di</code> using prettyprinter <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_nt_map"><span class="keyword">val</span> pp_nt_map</span> : <code class="type">Format.formatter -> Bnf_spec.Bnf.ProdSet.t Bnf_spec.Bnf.NTMap.t -> unit</code></pre><div class="info ">
+<code class="code">pp_nt_map ppf nts</code> prettyprint map of nonterminals <code class="code">nts</code> using
+    prettyprinter <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_live_nts"><span class="keyword">val</span> pp_live_nts</span> : <code class="type">Format.formatter -><br>       (int * int Bnf_spec.Bnf.ProdMap.t) Bnf_spec.Bnf.NTMap.t -> unit</code></pre><div class="info ">
+<code class="code">pp_live_nts ppf nt_di</code> prettyprint map of nonterminal derivation
+    information <code class="code">nt_di</code> using prettyprinter <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_ts"><span class="keyword">val</span> pp_ts</span> : <code class="type">Format.formatter -> Bnf_spec.Bnf.TSet.t -> unit</code></pre><div class="info ">
+<code class="code">pp_ts ppf ts</code> prettyprint set of terminals <code class="code">ts</code> using prettyprinter
+    <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_nts"><span class="keyword">val</span> pp_nts</span> : <code class="type">Format.formatter -> Bnf_spec.Bnf.NTSet.t -> unit</code></pre><div class="info ">
+<code class="code">pp_nts ppf nts</code> prettyprint set of nonterminals <code class="code">nts</code> using
+    prettyprinter <code class="code">ppf</code>.<br>
+</div>
+
+<pre><span id="VALpp_prods"><span class="keyword">val</span> pp_prods</span> : <code class="type">Format.formatter -> Bnf_spec.Bnf.ProdSet.t -> unit</code></pre><div class="info ">
+<code class="code">pp_prods ppf prods</code> prettyprint set of productions <code class="code">prods</code> using
+    prettyprinter <code class="code">ppf</code>.<br>
+</div>
+</body></html>
