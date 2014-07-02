@@ -61,7 +61,7 @@ efficiently.
 ### Documentation of Functions
 
 For details see the API documentation in `cfg_intf.ml` or consult the latest
-[online API documentation](http://mmottl.bitbucket.org/projects/cfg/api/).
+[online API documentation](http://mmottl.github.io/cfg/api).
 
 ---------------------------------------------------------------------------
 
@@ -73,8 +73,9 @@ represents terminals and nonterminals as plain strings.  It reads in a grammar
 specification from `stdin` and prints information about the grammar.  Here is
 an example invocation (from top directory in the distribution after building):
 
-  :::sh
-  bnf.native < examples/bnf/test.bnf
+```sh
+bnf.native < examples/bnf/test.bnf
+```
 
 You cannot have several productions that contain the same terminals and
 nonterminals in the same order, because this BNF-example uses the unit-type
@@ -99,8 +100,8 @@ In the case of bugs, feature requests, contributions and similar, you can
 contact me here: <markus.mottl@gmail.com>
 
 Up-to-date information should be available at:
-<https://bitbucket.org/mmottl/cfg>
+<http://mmottl.github.io/cfg>
 
 Enjoy!
 
-Markus Mottl in Rutherford, NJ on June 29, 2012
+Markus Mottl in Rutherford, NJ on July 01, 2014
