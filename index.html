@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cfg : OCaml library for manipulating context-free grammars." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Cfg</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mmottl/cfg">View on GitHub</a>
+
+          <h1 id="project_title">Cfg</h1>
+          <h2 id="project_tagline">OCaml library for manipulating context-free grammars.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/mmottl/cfg/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/mmottl/cfg/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="cfg---manipulation-of-context-free-grammars" class="anchor" href="#cfg---manipulation-of-context-free-grammars"><span class="octicon octicon-link"></span></a>CFG - Manipulation of Context-Free Grammars</h1>
+
+<hr><h2>
+<a name="what-is-cfg" class="anchor" href="#what-is-cfg"><span class="octicon octicon-link"></span></a>What is CFG?</h2>
+
+<p>This <a href="http://www.ocaml.org">OCaml</a>-library consists of a set of modules which
+implement functions for analyzing and manipulating context-free grammars
+(CFGs) in a purely functional way.</p>
+
+<p>The core-module <code>cfg_impl.ml</code> contains a functor which allows the
+parameterization of the main transformation functions with arbitrary grammar
+entities (terminals, nonterminals, productions).  See the interface in
+<code>cfg_intf.ml</code> and the BNF-example.</p>
+
+<p>Thus, you may use this module for any kind of symbolic system that
+is equivalent to a context-free grammar.  This includes, for example,
+specifications of algebraic data types, which are isomorphic.</p>
+
+<hr><h2>
+<a name="using-cfg" class="anchor" href="#using-cfg"><span class="octicon octicon-link"></span></a>Using CFG</h2>
+
+<p>Besides building up grammars with the single function <code>add_prod</code>, some
+powerful functions allow you to construct new grammars from old ones: <code>union</code>,
+<code>diff</code>, <code>inter</code>.  These functions behave somewhat like their set counterparts.
+E.g. <code>inter</code> will generate the intersection of all grammar entities (common
+nonterminals and their common productions).</p>
+
+<p>Further manipulation functions exist for:</p>
+
+<ul>
+<li><p>Pruning unproductive productions and nonterminals: they contain
+references to nonexistent symbols.</p></li>
+<li><p>Pruning nonlive entities: such symbols and productions only exist
+in cyclic derivations from which there is no escape.</p></li>
+<li><p>Pruning unreachable entities: such symbols and productions cannot be
+reached from the start symbol.</p></li>
+<li><p>Generating a 'sane' grammar: combines the above steps.  In such
+grammars each entity is useful.</p></li>
+</ul><p>Functions for getting information on grammars:</p>
+
+<ul>
+<li><p>Calculating the minimum number of derivations necessary to derive
+nonterminals and productions.  This step is performed during pruning
+of nonlive symbols, because this process allows the easy collection of
+this information.</p></li>
+<li><p>Because the implementation is purely functional, the library can
+safely and efficiently export its internal representation without copying.</p></li>
+</ul><p>Due to the applicative nature of the library, which allows a lot of sharing
+in memory (persistence), it should be useful for handling large grammars
+efficiently.</p>
+
+<h3>
+<a name="documentation-of-functions" class="anchor" href="#documentation-of-functions"><span class="octicon octicon-link"></span></a>Documentation of Functions</h3>
+
+<p>For details see the API documentation in <code>cfg_intf.ml</code> or consult the latest
+<a href="http://mmottl.github.io/cfg/api">online API documentation</a>.</p>
+
+<hr><h2>
+<a name="bnf-example" class="anchor" href="#bnf-example"><span class="octicon octicon-link"></span></a>BNF-Example</h2>
+
+<p>The example in <code>examples/bnf</code> uses CFGs in traditional BNF-notation, which
+represents terminals and nonterminals as plain strings.  It reads in a grammar
+specification from <code>stdin</code> and prints information about the grammar.  Here is
+an example invocation (from top directory in the distribution after building):</p>
+
+<div class="highlight highlight-sh"><pre>bnf.native &lt; examples/bnf/test.bnf
+</pre></div>
+
+<p>You cannot have several productions that contain the same terminals and
+nonterminals in the same order, because this BNF-example uses the unit-type
+for tagging productions.  This does not allow for differences other than of
+syntactical nature.</p>
+
+<p>Thus, if you want to be able to distinguish between two productions which
+are otherwise structurally equivalent, just parameterize the CFG-module so
+that productions receive an additional tag to make them unequal.</p>
+
+<p>This allows you, for example, to use the library for doing transformations on
+grammars for abstract syntax, where productions carry additional information
+concerning static semantics (e.g. attributes).  Two syntactically identical
+productions may have different semantics then and will not be treated the same.</p>
+
+<hr><h2>
+<a name="contact-information-and-contributing" class="anchor" href="#contact-information-and-contributing"><span class="octicon octicon-link"></span></a>Contact Information and Contributing</h2>
+
+<p>In the case of bugs, feature requests, contributions and similar, you can
+contact me here: <a href="mailto:markus.mottl@gmail.com">markus.mottl@gmail.com</a></p>
+
+<p>Up-to-date information should be available at:
+<a href="http://mmottl.github.io/cfg">http://mmottl.github.io/cfg</a></p>
+
+<p>Enjoy!</p>
+
+<p>Markus Mottl in Rutherford, NJ on July 01, 2014</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cfg maintained by <a href="https://github.com/mmottl">mmottl</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
