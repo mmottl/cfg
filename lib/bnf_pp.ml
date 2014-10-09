@@ -13,25 +13,13 @@ let before_first iterator f_begin f_end fall =
       res) in
   iterator do_el
 
-let string_of_t t =
-  let str = String.escaped t in
-  let len = String.length str in
-  let res = String.make (len + 2) '"' in
-  String.blit str 0 res 1 len;
-  res
-
-let string_of_nt nt =
-  let str = String.escaped nt in
-  let len = String.length str in
-  let res = String.make (len + 4) '"' in
-  res.[0] <- '<';
-  res.[len + 3] <- '>';
-  String.blit str 0 res 2 len;
-  res
+let string_of_t t = Printf.sprintf "%S" t
+let string_of_nt nt = Printf.sprintf "<%S>" nt
 
 let string_of_symbol = function
   | T t -> string_of_t t
   | NT nt -> string_of_nt nt
+
 let rec pp_prod ppf = function
   | [] -> ()
   | [h] -> fprintf ppf "%s" (string_of_symbol h)
