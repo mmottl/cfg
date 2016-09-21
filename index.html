@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="CFG : OCaml library for manipulating context-free grammars." />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>CFG</title>
+    <meta charset="UTF-8">
+    <title>CFG by mmottl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">CFG</h1>
+      <h2 class="project-tagline">OCaml library for manipulating context-free grammars.</h2>
+      <a href="https://github.com/mmottl/cfg" class="btn">View on GitHub</a>
+      <a href="https://github.com/mmottl/cfg/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/mmottl/cfg/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mmottl/cfg">View on GitHub</a>
+    <section class="main-content">
+      <h1>
+<a id="cfg---manipulation-of-context-free-grammars" class="anchor" href="#cfg---manipulation-of-context-free-grammars" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CFG - Manipulation of Context-Free Grammars</h1>
 
-          <h1 id="project_title">CFG</h1>
-          <h2 id="project_tagline">OCaml library for manipulating context-free grammars.</h2>
+<hr>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/mmottl/cfg/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/mmottl/cfg/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="cfg---manipulation-of-context-free-grammars" class="anchor" href="#cfg---manipulation-of-context-free-grammars"><span class="octicon octicon-link"></span></a>CFG - Manipulation of Context-Free Grammars</h1>
-
-<hr><h2>
-<a name="what-is-cfg" class="anchor" href="#what-is-cfg"><span class="octicon octicon-link"></span></a>What is CFG?</h2>
+<h2>
+<a id="what-is-cfg" class="anchor" href="#what-is-cfg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is CFG?</h2>
 
 <p>This <a href="http://www.ocaml.org">OCaml</a>-library consists of a set of modules which
 implement functions for analyzing and manipulating context-free grammars
@@ -50,8 +40,10 @@ entities (terminals, nonterminals, productions).  See the interface in
 is equivalent to a context-free grammar.  This includes, for example,
 specifications of algebraic data types, which are isomorphic.</p>
 
-<hr><h2>
-<a name="using-cfg" class="anchor" href="#using-cfg"><span class="octicon octicon-link"></span></a>Using CFG</h2>
+<hr>
+
+<h2>
+<a id="using-cfg" class="anchor" href="#using-cfg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using CFG</h2>
 
 <p>Besides building up grammars with the single function <code>add_prod</code>, some
 powerful functions allow you to construct new grammars from old ones: <code>union</code>,
@@ -70,7 +62,9 @@ in cyclic derivations from which there is no escape.</p></li>
 reached from the start symbol.</p></li>
 <li><p>Generating a 'sane' grammar: combines the above steps.  In such
 grammars each entity is useful.</p></li>
-</ul><p>Functions for getting information on grammars:</p>
+</ul>
+
+<p>Functions for getting information on grammars:</p>
 
 <ul>
 <li><p>Calculating the minimum number of derivations necessary to derive
@@ -79,26 +73,29 @@ of nonlive symbols, because this process allows the easy collection of
 this information.</p></li>
 <li><p>Because the implementation is purely functional, the library can
 safely and efficiently export its internal representation without copying.</p></li>
-</ul><p>Due to the applicative nature of the library, which allows a lot of sharing
+</ul>
+
+<p>Due to the applicative nature of the library, which allows a lot of sharing
 in memory (persistence), it should be useful for handling large grammars
 efficiently.</p>
 
 <h3>
-<a name="documentation-of-functions" class="anchor" href="#documentation-of-functions"><span class="octicon octicon-link"></span></a>Documentation of Functions</h3>
+<a id="documentation-of-functions" class="anchor" href="#documentation-of-functions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation of Functions</h3>
 
 <p>For details see the API documentation in <code>cfg_intf.ml</code> or consult the latest
 <a href="http://mmottl.github.io/cfg/api">online API documentation</a>.</p>
 
-<hr><h2>
-<a name="bnf-example" class="anchor" href="#bnf-example"><span class="octicon octicon-link"></span></a>BNF-Example</h2>
+<hr>
+
+<h2>
+<a id="bnf-example" class="anchor" href="#bnf-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BNF-Example</h2>
 
 <p>The example in <code>examples/bnf</code> uses CFGs in traditional BNF-notation, which
 represents terminals and nonterminals as plain strings.  It reads in a grammar
 specification from <code>stdin</code> and prints information about the grammar.  Here is
 an example invocation (from top directory in the distribution after building):</p>
 
-<div class="highlight highlight-sh"><pre>bnf.native &lt; examples/bnf/test.bnf
-</pre></div>
+<div class="highlight highlight-source-shell"><pre>bnf.native <span class="pl-k">&lt;</span> examples/bnf/test.bnf</pre></div>
 
 <p>You cannot have several productions that contain the same terminals and
 nonterminals in the same order, because this BNF-example uses the unit-type
@@ -114,8 +111,10 @@ grammars for abstract syntax, where productions carry additional information
 concerning static semantics (e.g. attributes).  Two syntactically identical
 productions may have different semantics then and will not be treated the same.</p>
 
-<hr><h2>
-<a name="contact-information-and-contributing" class="anchor" href="#contact-information-and-contributing"><span class="octicon octicon-link"></span></a>Contact Information and Contributing</h2>
+<hr>
+
+<h2>
+<a id="contact-information-and-contributing" class="anchor" href="#contact-information-and-contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact Information and Contributing</h2>
 
 <p>In the case of bugs, feature requests, contributions and similar, you can
 contact me here: <a href="mailto:markus.mottl@gmail.com">markus.mottl@gmail.com</a></p>
@@ -126,18 +125,15 @@ contact me here: <a href="mailto:markus.mottl@gmail.com">markus.mottl@gmail.com<
 <p>Enjoy!</p>
 
 <p>Markus Mottl in Rutherford, NJ on July 01, 2014</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">CFG maintained by <a href="https://github.com/mmottl">mmottl</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/mmottl/cfg">CFG</a> is maintained by <a href="https://github.com/mmottl">mmottl</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
