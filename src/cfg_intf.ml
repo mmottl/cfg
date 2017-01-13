@@ -25,9 +25,14 @@
 
 (** Specification of grammar entities *)
 module type SPEC = sig
-  type t (** Terminals *)
-  type nt (** Nonterminals *)
-  type prod (** Productions *)
+  (** Terminals *)
+  type t
+
+  (** Nonterminals *)
+  type nt
+
+  (** Productions *)
+  type prod
 
   type symbol = NT of nt | T of t
 
@@ -38,7 +43,8 @@ end
 
 (** Interface to context-free grammars *)
 module type CFG = sig
-  module Spec : SPEC (** Specification of grammar elements *)
+  (** Specification of grammar elements *)
+  module Spec : SPEC
   open Spec
 
   module TSet : (Set.S with type elt = t)
@@ -48,8 +54,11 @@ module type CFG = sig
   module ProdSet : (Set.S with type elt = prod * symbol list)
   module ProdMap : (Map.S with type key = prod * symbol list)
 
-  type grammar (** The type of context-free grammars *)
-  type live_grammar (** The type of live CFGs *)
+  (** The type of context-free grammars *)
+  type grammar
+
+  (** The type of live CFGs *)
+  type live_grammar
 
   val empty : grammar
   (** [empty] is the empty grammar. *)
