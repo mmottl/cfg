@@ -1,8 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: ae4fabcbc002bd1d05c08e3b853b39e1)
+# DO NOT EDIT (digest: 90d89bd70d5e4f8060bfaa2ac481aa16)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
+true: annot, bin_annot
 <**/.svn>: -traverse
 <**/.svn>: not_hygienic
 ".bzr": -traverse
@@ -14,10 +15,10 @@
 "_darcs": -traverse
 "_darcs": not_hygienic
 # Library cfg
-"lib/cfg.cmxs": use_cfg
+"src/cfg.cmxs": use_cfg
 # Executable bnf
 <examples/bnf/bnf.{native,byte}>: use_cfg
-<examples/bnf/*.ml{,i}>: use_cfg
+<examples/bnf/*.ml{,i,y}>: use_cfg
 # OASIS_STOP
 
 true: -traverse

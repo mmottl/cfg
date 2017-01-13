@@ -1,9 +1,9 @@
 # OASIS_START
-# DO NOT EDIT (digest: 080f685a0db20fcaf2ea0900181d985b)
-lib/Bnf_spec
-lib/Bnf_parser
-lib/Bnf_lexer
-lib/Bnf_pp
-lib/Cfg_intf
-lib/Cfg_impl
+# DO NOT EDIT (digest: e031563cf8b1caca5c642754fcc6ee37)
+src/Bnf_spec
+src/Bnf_parser
+src/Bnf_lexer
+src/Bnf_pp
+src/Cfg_intf
+src/Cfg_impl
 # OASIS_STOP

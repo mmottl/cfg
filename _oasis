@@ -20,7 +20,7 @@ XStdFilesREADME:  false
 BuildTools:       ocamlbuild, ocamldoc, menhir
 
 Library cfg
-  Path:           lib
+  Path:           src
   FindlibName:    cfg
   Modules:        Bnf_spec,
                   Bnf_parser,
