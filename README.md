@@ -1,10 +1,6 @@
-CFG - Manipulation of Context-Free Grammars
-===========================================
+## CFG - Manipulation of Context-Free Grammars
 
----------------------------------------------------------------------------
-
-What is CFG?
-------------
+### What is CFG?
 
 This [OCaml](http://www.ocaml.org)-library consists of a set of modules which
 implement functions for analyzing and manipulating context-free grammars
@@ -19,10 +15,7 @@ Thus, you may use this module for any kind of symbolic system that
 is equivalent to a context-free grammar.  This includes, for example,
 specifications of algebraic data types, which are isomorphic.
 
----------------------------------------------------------------------------
-
-Using CFG
----------
+### Using CFG
 
 Besides building up grammars with the single function `add_prod`, some
 powerful functions allow you to construct new grammars from old ones: `union`,
@@ -61,12 +54,9 @@ efficiently.
 ### Documentation of Functions
 
 For details see the API documentation in `cfg_intf.ml` or consult the latest
-[online API documentation](http://mmottl.github.io/cfg/api).
+[online API documentation](http://mmottl.github.io/cfg/api/cfg).
 
----------------------------------------------------------------------------
-
-BNF-Example
------------
+### BNF-Example
 
 The example in `examples/bnf` uses CFGs in traditional BNF-notation, which
 represents terminals and nonterminals as plain strings.  It reads in a grammar
@@ -91,17 +81,9 @@ grammars for abstract syntax, where productions carry additional information
 concerning static semantics (e.g. attributes).  Two syntactically identical
 productions may have different semantics then and will not be treated the same.
 
----------------------------------------------------------------------------
+### Contact Information and Contributing
 
-Contact Information and Contributing
-------------------------------------
+Please submit bugs reports, feature requests, contributions and similar to
+the [GitHub issue tracker](https://github.com/mmottl/cfg/issues).
 
-In the case of bugs, feature requests, contributions and similar, you can
-contact me here: <markus.mottl@gmail.com>
-
-Up-to-date information should be available at:
-<http://mmottl.github.io/cfg>
-
-Enjoy!
-
-Markus Mottl in Rutherford, NJ on July 01, 2014
+Up-to-date information is available at: <https://mmottl.github.io/cfg>

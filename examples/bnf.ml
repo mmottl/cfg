@@ -1,4 +1,5 @@
 open Format
+open Cfg
 open Bnf_spec.Bnf
 open Bnf_pp
 
