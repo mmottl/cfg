@@ -1,0 +1,8 @@
+title: CFG
+description: OCaml library for manipulating context-free grammars.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
