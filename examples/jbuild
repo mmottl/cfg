@@ -2,7 +2,6 @@
 
 (executables (
   (names (bnf))
-  (public_names (bnf))
   (flags (
     :standard
     -w -9
