@@ -8,12 +8,12 @@ dev-repo: "https://github.com/mmottl/cfg.git"
 bug-reports: "https://github.com/mmottl/cfg/issues"
 
 build: [
-  ["jbuilder" "subst" "-p" name] {pinned}
-  ["jbuilder" "build" "-p" name "-j" jobs]
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
 ]
 
 depends: [
-  "jbuilder" {build & >= "1.0+beta10"}
+  "dune" {build & >= "1.1.0"}
 ]
 
 available: [ ocaml-version >= "4.04" ]
