@@ -8,6 +8,3 @@ clean:
 
 doc:
 	dune build @doc
-
-lint:
-	@opam lint cfg.opam
