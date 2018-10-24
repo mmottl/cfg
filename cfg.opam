@@ -14,5 +14,5 @@ build: [
 
 depends: [
   "ocaml" {>= "4.04"}
-  "dune" {build & >= "1.1.0"}
+  "dune" {build & >= "1.4.0"}
 ]
