@@ -1,1 +1,1 @@
-(executables (names bnf) (libraries cfg))
+(executables (names bnf) (libraries cfg) (modes byte exe))
