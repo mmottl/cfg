@@ -1,5 +1,6 @@
 (lang dune 2.7)
 (name cfg)
+(using menhir 2.1)
 
 (generate_opam_files true)
 
@@ -18,5 +19,6 @@
 CFG is a library for verifying and manipulating context-free grammars.")
   (depends
     (ocaml (>= 4.08))
+    menhir
   )
 )
