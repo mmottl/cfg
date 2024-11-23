@@ -1,4 +1,7 @@
-(library (public_name cfg))
+(library
+ (public_name cfg))
 
 (ocamllex bnf_lexer)
-(menhir (modules bnf_parser))
+
+(menhir
+ (modules bnf_parser))

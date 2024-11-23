@@ -2,7 +2,6 @@ module Spec = struct
   type t = string
   type nt = string
   type prod = unit
-
   type symbol = NT of nt | T of t
 
   let compare_t = compare

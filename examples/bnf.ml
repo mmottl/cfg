@@ -13,10 +13,10 @@ let pp_bounded_level ppf n level =
 
 let rec pp_bounded_levels_aux ppf n = function
   | [] -> ()
-  | [level] -> pp_bounded_level ppf n level
-  | level::levels ->
+  | [ level ] -> pp_bounded_level ppf n level
+  | level :: levels ->
       pp_bounded_level ppf n level;
-      pp_bounded_levels_aux ppf (n+1) levels
+      pp_bounded_levels_aux ppf (n + 1) levels
 
 let pp_bounded_levels ppf = pp_bounded_levels_aux ppf 1
 
@@ -30,12 +30,13 @@ let _ =
   and live_gr =
     try make_sane_live gr "S"
     with Not_found ->
-      eprintf "No start symbol <S> specified! Aborting...@\n"; exit 1 in
+      eprintf "No start symbol <S> specified! Aborting...@\n";
+      exit 1
+  in
 
   let gr_live_gr = grammar_of_live live_gr in
 
-  printf "@[<2>Original grammar:\n@\n%a@]@\n@\n" pp_nt_map
-    (grammar_contents gr);
+  printf "@[<2>Original grammar:\n@\n%a@]@\n@\n" pp_nt_map (grammar_contents gr);
 
   printf "@[<2>Terminals removed:\n@\n%a@]@\n@\n" pp_ts
     (TSet.diff ts_in_gr (ts_in_grammar gr_live_gr));
