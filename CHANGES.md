@@ -1,20 +1,21 @@
-### 2.3.0 (2022-03-27)
+## 2.3.1 (2024-11-23)
 
-  * Switched to OPAM file generation via `dune-project`
+- Reformatted everything with ocamlformat
 
-  * Switched to Menhir for parser generation
+## 2.3.0 (2022-03-27)
 
+- Switched to OPAM file generation via `dune-project`
 
-### 2.2.1 (2018-10-24)
+- Switched to Menhir for parser generation
 
-  * Updated to OPAM 2.0
+## 2.2.1 (2018-10-24)
 
+- Updated to OPAM 2.0
 
-### 2.2.0 (2018-08-19)
+## 2.2.0 (2018-08-19)
 
-  * Switched to dune and dune-release
+- Switched to dune and dune-release
 
+## 2.1.0 (2017-07-30)
 
-### 2.1.0 (2017-07-30)
-
-  * Switched to jbuilder and topkg
+- Switched to jbuilder and topkg
