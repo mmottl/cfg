@@ -66,13 +66,19 @@ module type CFG = sig
   (** [remove_nt gr nt] removes nonterminal [nt] from grammar [gr]. *)
 
   val union : grammar -> grammar -> grammar
-  (** [union gr1 gr2] @return the union grammar of [g1] and [g2]. *)
+  (** [union gr1 gr2]
+
+      @return the union grammar of [g1] and [g2]. *)
 
   val diff : grammar -> grammar -> grammar
-  (** [diff gr1 gr2] @return the difference grammar of [g1] and [g2]. *)
+  (** [diff gr1 gr2]
+
+      @return the difference grammar of [g1] and [g2]. *)
 
   val inter : grammar -> grammar -> grammar
-  (** [inter gr1 gr2] @return the intersection grammar of [g1] and [g2]. *)
+  (** [inter gr1 gr2]
+
+      @return the intersection grammar of [g1] and [g2]. *)
 
   val grammar_of_live : live_grammar -> grammar
   (** [grammar_of_live gr] converts a live grammar to a normal grammar. *)
