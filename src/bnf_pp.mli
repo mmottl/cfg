@@ -48,7 +48,8 @@ val pp_live_nts : formatter -> (int * int ProdMap.t) NTMap.t -> unit
     information [nt_di] using prettyprinter [ppf]. *)
 
 val pp_ts : formatter -> TSet.t -> unit
-(** [pp_ts ppf ts] prettyprint set of terminals [ts] using prettyprinter [ppf]. *)
+(** [pp_ts ppf ts] prettyprint set of terminals [ts] using prettyprinter [ppf].
+*)
 
 val pp_nts : formatter -> NTSet.t -> unit
 (** [pp_nts ppf nts] prettyprint set of nonterminals [nts] using prettyprinter
